@@ -1,1 +1,1 @@
-# Proyecto-el-ctrico
+# Proyecto-electrico
