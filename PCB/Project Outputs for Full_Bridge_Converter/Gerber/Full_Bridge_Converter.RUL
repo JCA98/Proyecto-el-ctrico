@@ -1,0 +1,14 @@
+DRC Rules Export File for PCB: C:\Users\Public\Documents\Altium\Projects\Full_Bridge_Converter\Full_Bridge_Converter.PcbDoc
+RuleKind=MinimumAnnularRing|RuleName=MinimumAnnularRing|Scope=Board|Minimum=5.50
+RuleKind=MinimumAnnularRing|RuleName=MinimumAnnularRing_ThermalPadVias|Scope=Board|Minimum=5.91
+RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=1.97
+RuleKind=Width|RuleName=Width|Scope=Board|Minimum=9.00
+RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=7.87
+RuleKind=Clearance|RuleName=Clearance_Poly|Scope=Board|Minimum=12.00
+RuleKind=Clearance|RuleName=Clearance_Poly to Poly|Scope=Board|Minimum=25.00
+RuleKind=Clearance|RuleName=Clearance_HV_GndLayer|Scope=Board|Minimum=60.00
+RuleKind=Clearance|RuleName=Clearance_HV_PwrLayer|Scope=Board|Minimum=118.11
+RuleKind=Clearance|RuleName=Clearance_HV_TOP_Layer|Scope=Board|Minimum=118.11
+RuleKind=Clearance|RuleName=Clearance_HV_Bottom_Layer|Scope=Board|Minimum=118.11
+RuleKind=Clearance|RuleName=Clearance_MH|Scope=Board|Minimum=59.06

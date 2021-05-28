@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=-3V_B Pin=C49-1
+Removed Pin From Net: NetName=-3V_B Pin=C50-1
+Removed Pin From Net: NetName=-3V_C Pin=C59-1
+Removed Pin From Net: NetName=-3V_C Pin=C60-1
+Removed Pin From Net: NetName=-3V_B Pin=U4-5
+Removed Pin From Net: NetName=-3V_C Pin=U5-5
+Added Pin To Net: NetName=-3V_C Pin=C49-1
+Added Pin To Net: NetName=-3V_C Pin=C50-1
+Added Pin To Net: NetName=-3V_B Pin=C59-1
+Added Pin To Net: NetName=-3V_B Pin=C60-1
+Added Pin To Net: NetName=-3V_C Pin=U4-5
+Added Pin To Net: NetName=-3V_B Pin=U5-5
+Added Room: Name=Optic_PWM
+Added Room: Name=PowerSupply

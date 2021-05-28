@@ -1,0 +1,10 @@
+Added Pin To Net: NetName=+5V_U1 Pin=C20-2
+Added Pin To Net: NetName=+5V_U1 Pin=C21-2
+Added Pin To Net: NetName=+5V_U2 Pin=C37-2
+Added Pin To Net: NetName=+5V_U2 Pin=C38-2
+Added Pin To Net: NetName=+5V_U1 Pin=R10-2
+Added Pin To Net: NetName=+5V_U2 Pin=R17-2
+Added Pin To Net: NetName=+5V_U1 Pin=U1-3
+Added Pin To Net: NetName=+5V_U1 Pin=U1-8
+Added Pin To Net: NetName=+5V_U2 Pin=U2-3
+Added Pin To Net: NetName=+5V_U2 Pin=U2-8

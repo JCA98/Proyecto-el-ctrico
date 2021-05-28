@@ -1,0 +1,5 @@
+Record=TopLevelDocument|FileName=Gate_Driver.SchDoc|SheetNumber=2
+Record=NoMainPathDocument|SourceDocument=Gate_Driver.SchDoc|FileName=Hardware.SchDoc|SheetNumber=5
+Record=NoMainPathDocument|SourceDocument=Gate_Driver.SchDoc|FileName=Optic_PWM.SchDoc|SheetNumber=4
+Record=NoMainPathDocument|SourceDocument=Gate_Driver.SchDoc|FileName=Power_Card.SchDoc|SheetNumber=1
+Record=NoMainPathDocument|SourceDocument=Gate_Driver.SchDoc|FileName=PowerSupply.SchDoc|SheetNumber=3

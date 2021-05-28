@@ -1,0 +1,28 @@
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 01:29:43 On 2/3/2021
+
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of PCB Document [Full_Bridge_Converter.PcbDoc]
+   Generated File[Full_Bridge_Converter.GTO]
+   Generated File[Full_Bridge_Converter.GTP]
+   Generated File[Full_Bridge_Converter.GTS]
+   Generated File[Full_Bridge_Converter.GTL]
+   Generated File[Full_Bridge_Converter.G1]
+   Generated File[Full_Bridge_Converter.G2]
+   Generated File[Full_Bridge_Converter.GBL]
+   Generated File[Full_Bridge_Converter.GBS]
+   Generated File[Full_Bridge_Converter.GBP]
+   Generated File[Full_Bridge_Converter.GBO]
+   Generated File[Full_Bridge_Converter.GM5]
+   Generated File[Full_Bridge_Converter.GM13]
+   Generated File[Full_Bridge_Converter.RUL]
+   Generated File[Full_Bridge_Converter.EXTREP]
+   Generated File[Full_Bridge_Converter.REP]
+
+
+Files Generated   : 15
+Documents Printed : 0
+
+Finished Output Generation At 01:29:45 On 2/3/2021

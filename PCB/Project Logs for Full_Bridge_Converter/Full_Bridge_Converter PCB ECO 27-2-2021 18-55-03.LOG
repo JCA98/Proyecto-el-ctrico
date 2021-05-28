@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=+5V_U1 Pin=TP17-1
+Removed Pin From Net: NetName=+5V_U1 Pin=TP18-1
+Removed Pin From Net: NetName=NetR6_1 Pin=TP19-1
+Removed Pin From Net: NetName=NetR5_1 Pin=TP20-1
+Removed Pin From Net: NetName=+5V_U2 Pin=TP21-1
+Removed Pin From Net: NetName=+5V_U2 Pin=TP22-1
+Removed Pin From Net: NetName=NetR12_1 Pin=TP23-1
+Removed Pin From Net: NetName=NetR13_1 Pin=TP24-1
+Removed Member From Class: ClassName=Optic_PWM Member=TP17
+Removed Member From Class: ClassName=Optic_PWM Member=TP18
+Removed Member From Class: ClassName=Optic_PWM Member=TP19
+Removed Member From Class: ClassName=Optic_PWM Member=TP20
+Removed Member From Class: ClassName=Optic_PWM Member=TP21
+Removed Member From Class: ClassName=Optic_PWM Member=TP22
+Removed Member From Class: ClassName=Optic_PWM Member=TP23
+Removed Member From Class: ClassName=Optic_PWM Member=TP24
