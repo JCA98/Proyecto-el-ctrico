@@ -47,16 +47,16 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [0, 27; 1440, 815]
+    Location      [1440, 160; 2806, 816]
     ZoomFactor    1.52582
-    SliderPosition [0, 0]
+    SliderPosition [-1, 185]
     ShowBrowser   off
     BrowserWidth  100
     Component {
       Type          IgbtWithDiode
       Name          "IGBTD"
       Show          off
-      Position      [500, 170]
+      Position      [665, 165]
       Direction     up
       Flipped       off
       Parameter {
@@ -79,7 +79,7 @@ Plecs {
       Type          IgbtWithDiode
       Name          "IGBTD1"
       Show          off
-      Position      [500, 255]
+      Position      [665, 250]
       Direction     up
       Flipped       off
       Parameter {
@@ -99,31 +99,18 @@ Plecs {
       }
     }
     Component {
-      Type          DCVoltageSource
-      Name          "V_dc"
-      Show          off
-      Position      [265, 225]
-      Direction     down
-      Flipped       on
-      Parameter {
-        Variable      "V"
-        Value         "200"
-        Show          on
-      }
-    }
-    Component {
       Type          Voltmeter
       Name          "Vm1"
-      Show          on
-      Position      [570, 255]
+      Show          off
+      Position      [710, 250]
       Direction     up
       Flipped       off
     }
     Component {
       Type          LogicalOperator
-      Name          "Logical\nOperator"
-      Show          on
-      Position      [440, 255]
+      Name          "Logical\nOperator\nsalida"
+      Show          off
+      Position      [620, 250]
       Direction     up
       Flipped       off
       Parameter {
@@ -141,7 +128,7 @@ Plecs {
       Type          Goto
       Name          "Goto3"
       Show          off
-      Position      [615, 255]
+      Position      [780, 250]
       Direction     right
       Flipped       off
       Parameter {
@@ -158,8 +145,8 @@ Plecs {
     Component {
       Type          Inductor
       Name          "L1"
-      Show          on
-      Position      [610, 210]
+      Show          off
+      Position      [745, 205]
       Direction     left
       Flipped       off
       Parameter {
@@ -176,8 +163,8 @@ Plecs {
     Component {
       Type          DCVoltageSource
       Name          "Vth"
-      Show          on
-      Position      [895, 260]
+      Show          off
+      Position      [935, 250]
       Direction     down
       Flipped       on
       Parameter {
@@ -189,8 +176,8 @@ Plecs {
     Component {
       Type          Ammeter
       Name          "Am1"
-      Show          on
-      Position      [660, 210]
+      Show          off
+      Position      [790, 205]
       Direction     left
       Flipped       off
     }
@@ -198,7 +185,7 @@ Plecs {
       Type          Goto
       Name          "Goto4"
       Show          off
-      Position      [685, 185]
+      Position      [810, 180]
       Direction     right
       Flipped       off
       Parameter {
@@ -216,12 +203,12 @@ Plecs {
       Type          From
       Name          "From9"
       Show          off
-      Position      [350, 255]
+      Position      [580, 250]
       Direction     right
       Flipped       off
       Parameter {
         Variable      "Tag"
-        Value         "S"
+        Value         "S2"
         Show          off
       }
       Parameter {
@@ -233,8 +220,8 @@ Plecs {
     Component {
       Type          Voltmeter
       Name          "Vm2"
-      Show          on
-      Position      [745, 255]
+      Show          off
+      Position      [850, 250]
       Direction     up
       Flipped       off
     }
@@ -242,7 +229,7 @@ Plecs {
       Type          Goto
       Name          "Goto6"
       Show          off
-      Position      [780, 255]
+      Position      [885, 250]
       Direction     right
       Flipped       off
       Parameter {
@@ -285,8 +272,8 @@ Plecs {
     Component {
       Type          Resistor
       Name          "Rth"
-      Show          on
-      Position      [825, 210]
+      Show          off
+      Position      [905, 205]
       Direction     right
       Flipped       off
       Parameter {
@@ -299,7 +286,7 @@ Plecs {
       Type          Subsystem
       Name          "Control de la\n corriente de salida"
       Show          on
-      Position      [320, 350]
+      Position      [845, 340]
       Direction     up
       Flipped       off
       Frame         [-50, -20; 50, 20]
@@ -408,7 +395,7 @@ Plecs {
           Flipped       off
           Parameter {
             Variable      "Tag"
-            Value         "S"
+            Value         "S2"
             Show          off
           }
           Parameter {
@@ -942,8 +929,8 @@ Plecs {
     Component {
       Type          Capacitor
       Name          "C1"
-      Show          on
-      Position      [700, 260]
+      Show          off
+      Position      [825, 255]
       Direction     down
       Flipped       on
       Parameter {
@@ -961,7 +948,7 @@ Plecs {
       Type          Subsystem
       Name          "Mediciones"
       Show          on
-      Position      [810, 350]
+      Position      [755, 75]
       Direction     up
       Flipped       off
       Frame         [-30, -20; 30, 20]
@@ -1224,7 +1211,7 @@ Plecs {
           Flipped       off
           Parameter {
             Variable      "Tag"
-            Value         "S"
+            Value         "S2"
             Show          off
           }
           Parameter {
@@ -1675,6 +1662,995 @@ Plecs {
         }
       }
     }
+    Component {
+      Type          IgbtWithDiode
+      Name          "IGBTD2"
+      Show          off
+      Position      [495, 180]
+      Direction     up
+      Flipped       off
+      Parameter {
+        Variable      "s_init"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "thermal"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "T_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          IgbtWithDiode
+      Name          "IGBTD3"
+      Show          off
+      Position      [495, 255]
+      Direction     up
+      Flipped       off
+      Parameter {
+        Variable      "s_init"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "thermal"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "T_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          IgbtWithDiode
+      Name          "IGBTD4"
+      Show          off
+      Position      [340, 180]
+      Direction     up
+      Flipped       off
+      Parameter {
+        Variable      "s_init"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "thermal"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "T_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          IgbtWithDiode
+      Name          "IGBTD5"
+      Show          off
+      Position      [340, 255]
+      Direction     up
+      Flipped       off
+      Parameter {
+        Variable      "s_init"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "thermal"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "T_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          LogicalOperator
+      Name          "Logical\nOperator \nentrada"
+      Show          off
+      Position      [440, 255]
+      Direction     up
+      Flipped       off
+      Parameter {
+        Variable      "Operator"
+        Value         "6"
+        Show          off
+      }
+      Parameter {
+        Variable      "Inputs"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          From
+      Name          "From10"
+      Show          off
+      Position      [385, 255]
+      Direction     right
+      Flipped       off
+      Parameter {
+        Variable      "Tag"
+        Value         "S1"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          From
+      Name          "From11"
+      Show          off
+      Position      [240, 255]
+      Direction     right
+      Flipped       off
+      Parameter {
+        Variable      "Tag"
+        Value         "S1"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          Capacitor
+      Name          "C2"
+      Show          off
+      Position      [525, 225]
+      Direction     down
+      Flipped       on
+      Parameter {
+        Variable      "C"
+        Value         "1e-6"
+        Show          off
+      }
+      Parameter {
+        Variable      "v_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Inductor
+      Name          "L2"
+      Show          off
+      Position      [215, 185]
+      Direction     left
+      Flipped       off
+      Parameter {
+        Variable      "L"
+        Value         "5e-3"
+        Show          off
+      }
+      Parameter {
+        Variable      "i_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          ACVoltageSource
+      Name          "V_ac"
+      Show          off
+      Position      [190, 210]
+      Direction     down
+      Flipped       on
+      Parameter {
+        Variable      "V"
+        Value         "170"
+        Show          off
+      }
+      Parameter {
+        Variable      "w"
+        Value         "2*pi*60"
+        Show          off
+      }
+      Parameter {
+        Variable      "phi"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          SineGenerator
+      Name          "Vin"
+      Show          on
+      Position      [105, 340]
+      Direction     right
+      Flipped       off
+      Parameter {
+        Variable      "Amplitude"
+        Value         "170"
+        Show          off
+      }
+      Parameter {
+        Variable      "Bias"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Frequency"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "Phase"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Units"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          Gain
+      Name          "1/170"
+      Show          on
+      Position      [165, 340]
+      Direction     right
+      Flipped       off
+      Parameter {
+        Variable      "K"
+        Value         "1/170"
+        Show          off
+      }
+      Parameter {
+        Variable      "Multiplication"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "11"
+        Show          off
+      }
+    }
+    Component {
+      Type          Product
+      Name          "Product"
+      Show          on
+      Position      [240, 375]
+      Direction     up
+      Flipped       off
+      Parameter {
+        Variable      "Inputs"
+        Value         "2"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "11"
+        Show          off
+      }
+    }
+    Component {
+      Type          Step
+      Name          "Vc_deseado"
+      Show          on
+      Position      [50, 415]
+      Direction     right
+      Flipped       off
+      Parameter {
+        Variable      "Time"
+        Value         "0.2"
+        Show          off
+      }
+      Parameter {
+        Variable      "Before"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "After"
+        Value         "25"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
+        Show          off
+      }
+    }
+    Component {
+      Type          Sum
+      Name          "Sum2"
+      Show          off
+      Position      [100, 415]
+      Direction     left
+      Flipped       on
+      Parameter {
+        Variable      "IconShape"
+        Value         "2"
+        Show          off
+      }
+      Parameter {
+        Variable      "Inputs"
+        Value         "|-+"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
+        Show          off
+      }
+    }
+    Component {
+      Type          Subsystem
+      Name          "Speed Controller23"
+      Show          off
+      Position      [160, 405]
+      Direction     up
+      Flipped       off
+      Frame         [-25, -10; 25, 10]
+      LabelPosition [0, 13]
+      LabelAlign    up
+      SampleTime    "250e-6"
+      CodeGenDiscretizationMethod "2"
+      CodeGenTarget "Generic"
+      MaskType      "PI controller"
+      MaskDescription "This is a parallel discrete PI controller with anti win"
+"dup protection. The algorithm used to the integral part was the Tustin Transf"
+"ormation."
+      MaskDisplay   "color(0, 0, 0)\nline([-15,-15,15],[-8,8,8])\ncolor(255, 0"
+", 0)\nline([-12,-12,12],[8,0,-8])\n"
+      MaskIconFrame on
+      MaskIconOpaque off
+      MaskIconRotates on
+      Parameter {
+        Variable      "Kp"
+        Prompt        "Proportional gain (Kp)"
+        Type          FreeText
+        Value         "4*100*pi*1*5e-3"
+        Show          off
+        Tunable       on
+        TabName       ""
+      }
+      Parameter {
+        Variable      "Ki"
+        Prompt        "Integral gain (Ki)"
+        Type          FreeText
+        Value         "4*(100*pi)^2*1*5e-3"
+        Show          off
+        Tunable       on
+        TabName       ""
+      }
+      Parameter {
+        Variable      "b"
+        Prompt        "beta (b)"
+        Type          FreeText
+        Value         "1"
+        Show          off
+        Tunable       on
+        TabName       ""
+      }
+      Parameter {
+        Variable      "u0"
+        Prompt        "Inicial condition (u0)"
+        Type          FreeText
+        Value         "0"
+        Show          off
+        Tunable       on
+        TabName       ""
+      }
+      Parameter {
+        Variable      "umax"
+        Prompt        "Maximun output (umax)"
+        Type          FreeText
+        Value         "25.5"
+        Show          off
+        Tunable       on
+        TabName       ""
+      }
+      Parameter {
+        Variable      "umin"
+        Prompt        "Minimun output (umin)"
+        Type          FreeText
+        Value         "-25.5"
+        Show          off
+        Tunable       on
+        TabName       ""
+      }
+      Parameter {
+        Variable      "Ts"
+        Prompt        "Sample time"
+        Type          FreeText
+        Value         "0.5/30000"
+        Show          off
+        Tunable       off
+        TabName       ""
+      }
+      Terminal {
+        Type          Output
+        Position      [29, 0]
+        Direction     right
+      }
+      Terminal {
+        Type          Input
+        Position      [-25, -5]
+        Direction     left
+      }
+      Schematic {
+        Location      [1654, 258; 2329, 898]
+        ZoomFactor    1.30957
+        SliderPosition [48, 0]
+        ShowBrowser   off
+        BrowserWidth  100
+        Component {
+          Type          Output
+          Name          "u"
+          Show          on
+          Position      [555, 190]
+          Direction     right
+          Flipped       off
+          Parameter {
+            Variable      "Index"
+            Value         "1"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Input
+          Name          "+"
+          Show          on
+          Position      [245, 185]
+          Direction     right
+          Flipped       off
+          Parameter {
+            Variable      "Index"
+            Value         "2"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          CScript
+          Name          "C-Script"
+          Show          off
+          Position      [460, 190]
+          Direction     up
+          Flipped       off
+          Parameter {
+            Variable      "DialogGeometry"
+            Value         "[130 213 422 314]"
+            Show          off
+          }
+          Parameter {
+            Variable      "NumInputs"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "NumOutputs"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "NumContStates"
+            Value         "0"
+            Show          off
+          }
+          Parameter {
+            Variable      "NumDiscStates"
+            Value         "0"
+            Show          off
+          }
+          Parameter {
+            Variable      "NumZCSignals"
+            Value         "0"
+            Show          off
+          }
+          Parameter {
+            Variable      "DirectFeedthrough"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ts"
+            Value         "Ts"
+            Show          off
+          }
+          Parameter {
+            Variable      "Parameters"
+            Value         "Ts, Kp, Ki, umax, umin, u0, b"
+            Show          off
+          }
+          Parameter {
+            Variable      "LangStandard"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "GnuExtensions"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "RuntimeCheck"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "Declarations"
+            Value         "#include <float.h>\n#include\t<math.h>\n\n#define "
+"\tr\t    Input(0)\n#define \ty\t    Input(1)\n#define \tu\t    Output(0)\n\n#"
+"define Ts \t\tParamRealData(0,0)\n#define Kp \t\tParamRealData(1,0)\n#define "
+"Ki \t\tParamRealData(2,0)\n#define umax \tParamRealData(3,0)\n#define umin \t"
+"ParamRealData(4,0)\n#define u0 \t\tParamRealData(5,0)\n#define b \t\tParamRea"
+"lData(6,0)\n\n\ndouble up, ui, ui1=0, e=0, e1=0;"
+            Show          off
+          }
+          Parameter {
+            Variable      "StartFcn"
+            Value         ""
+            Show          off
+          }
+          Parameter {
+            Variable      "OutputFcn"
+            Value         "e=r-y;\nup=Kp*e;\nui=Ki*Ts*(e+e1)*0.5+ui1;\nu= Kp*("
+"b*r-y) + ui + u0;\n\nif (u>umax)\n\t{u=umax;}\nelse if (u<umin)\n\t{u=umin;}"
+"\nelse\n\t{\n\te1=e;\n\tui1=ui;\n\t}\n\n"
+            Show          off
+          }
+          Parameter {
+            Variable      "UpdateFcn"
+            Value         ""
+            Show          off
+          }
+          Parameter {
+            Variable      "DerivativeFcn"
+            Value         ""
+            Show          off
+          }
+          Parameter {
+            Variable      "TerminateFcn"
+            Value         ""
+            Show          off
+          }
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "C-Script"
+          SrcTerminal   2
+          DstComponent  "u"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "+"
+          SrcTerminal   1
+          Points        [340, 185; 340, 190]
+          DstComponent  "C-Script"
+          DstTerminal   1
+        }
+      }
+      MaskProbe {
+        Name          "Measured speed"
+      }
+      MaskProbe {
+        Name          "Desired speed"
+        Probe {
+          Component     "+"
+          Path          ""
+          Signals       {"Output"}
+        }
+      }
+      MaskProbe {
+        Name          "Controller output"
+        Probe {
+          Component     "u"
+          Path          ""
+          Signals       {"Input"}
+        }
+      }
+    }
+    Component {
+      Type          Sum
+      Name          "Sum3"
+      Show          off
+      Position      [295, 385]
+      Direction     left
+      Flipped       on
+      Parameter {
+        Variable      "IconShape"
+        Value         "2"
+        Show          off
+      }
+      Parameter {
+        Variable      "Inputs"
+        Value         "|-+"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
+        Show          off
+      }
+    }
+    Component {
+      Type          Subsystem
+      Name          "Speed Controller24"
+      Show          off
+      Position      [350, 375]
+      Direction     up
+      Flipped       off
+      Frame         [-25, -10; 25, 10]
+      LabelPosition [0, 13]
+      LabelAlign    up
+      SampleTime    "250e-6"
+      CodeGenDiscretizationMethod "2"
+      CodeGenTarget "Generic"
+      MaskType      "PI controller"
+      MaskDescription "This is a parallel discrete PI controller with anti win"
+"dup protection. The algorithm used to the integral part was the Tustin Transf"
+"ormation."
+      MaskDisplay   "color(0, 0, 0)\nline([-15,-15,15],[-8,8,8])\ncolor(255, 0"
+", 0)\nline([-12,-12,12],[8,0,-8])\n"
+      MaskIconFrame on
+      MaskIconOpaque off
+      MaskIconRotates on
+      Parameter {
+        Variable      "Kp"
+        Prompt        "Proportional gain (Kp)"
+        Type          FreeText
+        Value         "4*100*pi*1*5e-3"
+        Show          off
+        Tunable       on
+        TabName       ""
+      }
+      Parameter {
+        Variable      "Ki"
+        Prompt        "Integral gain (Ki)"
+        Type          FreeText
+        Value         "4*(100*pi)^2*1*5e-3"
+        Show          off
+        Tunable       on
+        TabName       ""
+      }
+      Parameter {
+        Variable      "b"
+        Prompt        "beta (b)"
+        Type          FreeText
+        Value         "1"
+        Show          off
+        Tunable       on
+        TabName       ""
+      }
+      Parameter {
+        Variable      "u0"
+        Prompt        "Inicial condition (u0)"
+        Type          FreeText
+        Value         "0"
+        Show          off
+        Tunable       on
+        TabName       ""
+      }
+      Parameter {
+        Variable      "umax"
+        Prompt        "Maximun output (umax)"
+        Type          FreeText
+        Value         "25.5"
+        Show          off
+        Tunable       on
+        TabName       ""
+      }
+      Parameter {
+        Variable      "umin"
+        Prompt        "Minimun output (umin)"
+        Type          FreeText
+        Value         "-25.5"
+        Show          off
+        Tunable       on
+        TabName       ""
+      }
+      Parameter {
+        Variable      "Ts"
+        Prompt        "Sample time"
+        Type          FreeText
+        Value         "0.5/30000"
+        Show          off
+        Tunable       off
+        TabName       ""
+      }
+      Terminal {
+        Type          Output
+        Position      [29, 0]
+        Direction     right
+      }
+      Terminal {
+        Type          Input
+        Position      [-25, -5]
+        Direction     left
+      }
+      Schematic {
+        Location      [1654, 258; 2329, 898]
+        ZoomFactor    1.30957
+        SliderPosition [48, 0]
+        ShowBrowser   off
+        BrowserWidth  100
+        Component {
+          Type          Output
+          Name          "u"
+          Show          on
+          Position      [555, 190]
+          Direction     right
+          Flipped       off
+          Parameter {
+            Variable      "Index"
+            Value         "1"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Input
+          Name          "+"
+          Show          on
+          Position      [245, 185]
+          Direction     right
+          Flipped       off
+          Parameter {
+            Variable      "Index"
+            Value         "2"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          CScript
+          Name          "C-Script"
+          Show          off
+          Position      [460, 190]
+          Direction     up
+          Flipped       off
+          Parameter {
+            Variable      "DialogGeometry"
+            Value         "[130 213 422 314]"
+            Show          off
+          }
+          Parameter {
+            Variable      "NumInputs"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "NumOutputs"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "NumContStates"
+            Value         "0"
+            Show          off
+          }
+          Parameter {
+            Variable      "NumDiscStates"
+            Value         "0"
+            Show          off
+          }
+          Parameter {
+            Variable      "NumZCSignals"
+            Value         "0"
+            Show          off
+          }
+          Parameter {
+            Variable      "DirectFeedthrough"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ts"
+            Value         "Ts"
+            Show          off
+          }
+          Parameter {
+            Variable      "Parameters"
+            Value         "Ts, Kp, Ki, umax, umin, u0, b"
+            Show          off
+          }
+          Parameter {
+            Variable      "LangStandard"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "GnuExtensions"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "RuntimeCheck"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "Declarations"
+            Value         "#include <float.h>\n#include\t<math.h>\n\n#define "
+"\tr\t    Input(0)\n#define \ty\t    Input(1)\n#define \tu\t    Output(0)\n\n#"
+"define Ts \t\tParamRealData(0,0)\n#define Kp \t\tParamRealData(1,0)\n#define "
+"Ki \t\tParamRealData(2,0)\n#define umax \tParamRealData(3,0)\n#define umin \t"
+"ParamRealData(4,0)\n#define u0 \t\tParamRealData(5,0)\n#define b \t\tParamRea"
+"lData(6,0)\n\n\ndouble up, ui, ui1=0, e=0, e1=0;"
+            Show          off
+          }
+          Parameter {
+            Variable      "StartFcn"
+            Value         ""
+            Show          off
+          }
+          Parameter {
+            Variable      "OutputFcn"
+            Value         "e=r-y;\nup=Kp*e;\nui=Ki*Ts*(e+e1)*0.5+ui1;\nu= Kp*("
+"b*r-y) + ui + u0;\n\nif (u>umax)\n\t{u=umax;}\nelse if (u<umin)\n\t{u=umin;}"
+"\nelse\n\t{\n\te1=e;\n\tui1=ui;\n\t}\n\n"
+            Show          off
+          }
+          Parameter {
+            Variable      "UpdateFcn"
+            Value         ""
+            Show          off
+          }
+          Parameter {
+            Variable      "DerivativeFcn"
+            Value         ""
+            Show          off
+          }
+          Parameter {
+            Variable      "TerminateFcn"
+            Value         ""
+            Show          off
+          }
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "C-Script"
+          SrcTerminal   2
+          DstComponent  "u"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "+"
+          SrcTerminal   1
+          Points        [340, 185; 340, 190]
+          DstComponent  "C-Script"
+          DstTerminal   1
+        }
+      }
+      MaskProbe {
+        Name          "Measured speed"
+      }
+      MaskProbe {
+        Name          "Desired speed"
+        Probe {
+          Component     "+"
+          Path          ""
+          Signals       {"Output"}
+        }
+      }
+      MaskProbe {
+        Name          "Controller output"
+        Probe {
+          Component     "u"
+          Path          ""
+          Signals       {"Input"}
+        }
+      }
+    }
+    Component {
+      Type          Voltmeter
+      Name          "Vm3"
+      Show          off
+      Position      [550, 225]
+      Direction     up
+      Flipped       off
+    }
+    Component {
+      Type          Goto
+      Name          "Goto7"
+      Show          off
+      Position      [590, 150]
+      Direction     right
+      Flipped       off
+      Parameter {
+        Variable      "Tag"
+        Value         "Vc"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          From
+      Name          "From13"
+      Show          off
+      Position      [100, 445]
+      Direction     up
+      Flipped       off
+      Parameter {
+        Variable      "Tag"
+        Value         "Vc"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          From
+      Name          "From6"
+      Show          off
+      Position      [295, 415]
+      Direction     up
+      Flipped       off
+      Parameter {
+        Variable      "Tag"
+        Value         "iL"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          LogicalOperator
+      Name          "Logical\nOperator \nentrada1"
+      Show          off
+      Position      [290, 180]
+      Direction     up
+      Flipped       off
+      Parameter {
+        Variable      "Operator"
+        Value         "6"
+        Show          off
+      }
+      Parameter {
+        Variable      "Inputs"
+        Value         "2"
+        Show          off
+      }
+    }
     Connection {
       Type          Signal
       SrcComponent  "Vm2"
@@ -1684,65 +2660,86 @@ Plecs {
     }
     Connection {
       Type          Wire
-      SrcComponent  "Vm1"
+      SrcComponent  "IGBTD1"
       SrcTerminal   2
-      Points        [570, 310]
+      Points        [665, 305]
       Branch {
-        Points        [700, 310]
+        Points        [710, 305]
         Branch {
-          Points        [745, 310]
+          Points        [825, 305]
           Branch {
-            Points        [895, 310]
-            DstComponent  "Vth"
-            DstTerminal   2
+            Points        [850, 305]
+            Branch {
+              Points        [935, 305]
+              DstComponent  "Vth"
+              DstTerminal   2
+            }
+            Branch {
+              DstComponent  "Vm2"
+              DstTerminal   2
+            }
           }
           Branch {
-            DstComponent  "Vm2"
+            DstComponent  "C1"
             DstTerminal   2
           }
         }
         Branch {
-          DstComponent  "C1"
+          DstComponent  "Vm1"
           DstTerminal   2
         }
       }
       Branch {
-        Points        [500, 310]
+        Points        [550, 305]
         Branch {
-          Points        [265, 310]
-          DstComponent  "V_dc"
-          DstTerminal   2
+          Points        [525, 305]
+          Branch {
+            Points        [495, 305]
+            Branch {
+              Points        [340, 305]
+              DstComponent  "IGBTD5"
+              DstTerminal   2
+            }
+            Branch {
+              DstComponent  "IGBTD3"
+              DstTerminal   2
+            }
+          }
+          Branch {
+            DstComponent  "C2"
+            DstTerminal   2
+          }
         }
         Branch {
-          DstComponent  "IGBTD1"
+          DstComponent  "Vm3"
           DstTerminal   2
         }
       }
     }
     Connection {
       Type          Wire
-      SrcComponent  "Vm1"
-      SrcTerminal   1
-      Points        [570, 210]
+      SrcComponent  "IGBTD"
+      SrcTerminal   2
+      Points        [665, 205]
       Branch {
-        Points        [500, 210]
+        Points        [710, 205]
         Branch {
-          DstComponent  "IGBTD"
-          DstTerminal   2
+          DstComponent  "L1"
+          DstTerminal   1
         }
         Branch {
-          DstComponent  "IGBTD1"
+          DstComponent  "Vm1"
           DstTerminal   1
         }
       }
       Branch {
-        DstComponent  "L1"
+        DstComponent  "IGBTD1"
         DstTerminal   1
       }
     }
     Connection {
       Type          Signal
-      SrcComponent  "Logical\nOperator"
+      SrcComponent  "Logical\nOperator\nsalida"
       SrcTerminal   1
       DstComponent  "IGBTD1"
       DstTerminal   3
@@ -1765,62 +2762,246 @@ Plecs {
       Type          Signal
       SrcComponent  "Am1"
       SrcTerminal   3
-      Points        [660, 185]
       DstComponent  "Goto4"
       DstTerminal   1
     }
     Connection {
-      Type          Signal
-      SrcComponent  "From9"
+      Type          Wire
+      SrcComponent  "Rth"
       SrcTerminal   1
-      Points        [395, 255]
+      Points        [935, 205]
+      DstComponent  "Vth"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Logical\nOperator \nentrada"
+      SrcTerminal   1
+      DstComponent  "IGBTD3"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From10"
+      SrcTerminal   1
+      Points        [405, 255]
       Branch {
-        Points        [395, 170]
-        DstComponent  "IGBTD"
-        DstTerminal   3
+        DstComponent  "Logical\nOperator \nentrada"
+        DstTerminal   2
       }
       Branch {
-        DstComponent  "Logical\nOperator"
+        Points        [405, 180]
+        DstComponent  "IGBTD2"
+        DstTerminal   3
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "IGBTD2"
+      SrcTerminal   1
+      Points        [495, 135]
+      Branch {
+        Points        [525, 135]
+        Branch {
+          Points        [550, 135]
+          Branch {
+            Points        [665, 135]
+            DstComponent  "IGBTD"
+            DstTerminal   1
+          }
+          Branch {
+            DstComponent  "Vm3"
+            DstTerminal   1
+          }
+        }
+        Branch {
+          DstComponent  "C2"
+          DstTerminal   1
+        }
+      }
+      Branch {
+        Points        [340, 135]
+        DstComponent  "IGBTD4"
+        DstTerminal   1
+      }
+    }
+    Connection {
+      Type          Signal
+      Points        [309, 255]
+      DstComponent  "IGBTD5"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "Vm2"
+      SrcTerminal   1
+      Points        [850, 205]
+      Branch {
+        DstComponent  "Rth"
+        DstTerminal   2
+      }
+      Branch {
+        Points        [825, 205]
+        Branch {
+          DstComponent  "C1"
+          DstTerminal   1
+        }
+        Branch {
+          DstComponent  "Am1"
+          DstTerminal   2
+        }
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "IGBTD2"
+      SrcTerminal   2
+      Points        [495, 210]
+      Branch {
+        DstComponent  "IGBTD3"
+        DstTerminal   1
+      }
+      Branch {
+        Points        [245, 210; 245, 185]
+        DstComponent  "L2"
         DstTerminal   2
       }
     }
     Connection {
       Type          Wire
-      SrcComponent  "V_dc"
+      SrcComponent  "V_ac"
       SrcTerminal   1
-      Points        [265, 140; 500, 140]
-      DstComponent  "IGBTD"
+      Points        [190, 185]
+      DstComponent  "L2"
       DstTerminal   1
     }
     Connection {
       Type          Wire
-      SrcComponent  "Rth"
+      SrcComponent  "IGBTD5"
+      SrcTerminal   1
+      Points        [340, 230]
+      Branch {
+        DstComponent  "IGBTD4"
+        DstTerminal   2
+      }
+      Branch {
+        DstComponent  "V_ac"
+        DstTerminal   2
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From11"
+      SrcTerminal   1
+      Points        [260, 255]
+      Branch {
+        Points        [310, 255]
+      }
+      Branch {
+        DstComponent  "Logical\nOperator \nentrada1"
+        DstTerminal   2
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Vin"
+      SrcTerminal   1
+      DstComponent  "1/170"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "1/170"
       SrcTerminal   2
-      Points        [745, 210]
+      Points        [205, 340; 205, 370]
+      DstComponent  "Product"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Vc_deseado"
+      SrcTerminal   1
+      DstComponent  "Sum2"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Sum2"
+      SrcTerminal   1
+      DstComponent  "Speed Controller23"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Speed Controller23"
+      SrcTerminal   1
+      Points        [205, 405; 205, 380]
+      DstComponent  "Product"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Product"
+      SrcTerminal   1
+      Points        [265, 375; 265, 385]
+      DstComponent  "Sum3"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Sum3"
+      SrcTerminal   1
+      DstComponent  "Speed Controller24"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From9"
+      SrcTerminal   1
+      Points        [590, 250]
       Branch {
-        Points        [700, 210]
-        Branch {
-          DstComponent  "Am1"
-          DstTerminal   2
-        }
-        Branch {
-          DstComponent  "C1"
-          DstTerminal   1
-        }
+        DstComponent  "Logical\nOperator\nsalida"
+        DstTerminal   2
       }
       Branch {
-        DstComponent  "Vm2"
-        DstTerminal   1
+        Points        [590, 165]
+        DstComponent  "IGBTD"
+        DstTerminal   3
       }
     }
     Connection {
-      Type          Wire
-      SrcComponent  "Rth"
-      SrcTerminal   1
-      Points        [895, 210]
-      DstComponent  "Vth"
+      Type          Signal
+      SrcComponent  "Vm3"
+      SrcTerminal   3
+      Points        [555, 225; 555, 150]
+      DstComponent  "Goto7"
       DstTerminal   1
     }
+    Connection {
+      Type          Signal
+      SrcComponent  "From13"
+      SrcTerminal   1
+      DstComponent  "Sum2"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From6"
+      SrcTerminal   1
+      DstComponent  "Sum3"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Logical\nOperator \nentrada1"
+      SrcTerminal   1
+      DstComponent  "IGBTD4"
+      DstTerminal   3
+    }
+    Annotation {
+      Name          "PR se debe configurar"
+      Position      [355, 355]
+    } 
   }
   Analysis {
     Type          ACSweep
