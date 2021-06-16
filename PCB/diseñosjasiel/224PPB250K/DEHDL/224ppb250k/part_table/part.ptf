@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART '224PPB250K'
+CLASS = DISCRETE
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "ARROW_PART_NUMBER", "ARROW_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "ILLINOIS CAPACITOR", "224PPB250K" (!) = "", "224PPB250K", "Other", "598-224PPB250K", "https://www.mouser.com/Search/Refine.aspx?Keyword=598-224PPB250K", "", "", "CAP FILM 0.22UF 10% 250VDC RAD", "https://componentsearchengine.com/Datasheets/1/224PPB250K.pdf", "15 mm"
+END_PART
+
+END.
