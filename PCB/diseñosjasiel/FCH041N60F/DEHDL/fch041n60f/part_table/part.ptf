@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'FCH041N60F'
+CLASS = DISCRETE
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "ARROW_PART_NUMBER", "ARROW_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "ON Semiconductor", "FCH041N60F" (!) = "", "TO556P482X1562X2475-3P", "Transistor Outline, Vertical", "512-FCH041N60F", "https://www.mouser.co.uk/ProductDetail/ON-Semiconductor-Fairchild/FCH041N60F?qs=6MGhqEKwI8WD95X2TDsvFg%3D%3D", "", "", "MOSFET 600V N-Channel MOSFET, FRFET", "https://www.onsemi.com/pub/Collateral/FCH041N60F-D.pdf", "4.82 mm"
+END_PART
+
+END.
