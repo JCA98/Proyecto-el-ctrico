@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 224PPB250K
+D CAP FILM 0.22UF 10% 250VDC RAD
+K
+F https://componentsearchengine.com/Datasheets/1/224PPB250K.pdf
+$ENDCMP
+#
+#End Doc Library
