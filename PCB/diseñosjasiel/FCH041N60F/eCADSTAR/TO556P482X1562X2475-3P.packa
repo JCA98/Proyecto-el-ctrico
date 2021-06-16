@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "FCH041N60F"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2021-06-15-07:09:37)
+    (mountForm default
+        (footprintRef "TO556P482X1562X2475-3P")
+        (spec "System")
+    )
+)
