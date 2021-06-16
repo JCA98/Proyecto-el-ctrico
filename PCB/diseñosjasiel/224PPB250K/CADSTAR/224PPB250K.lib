@@ -1,0 +1,18 @@
+.224PPB250K :1 ;CAP FILM 0.22UF 10% 250VDC RAD
+"224PPB250K"
+*STM C
+*NGS
+*PLB 1="1" 2="2"
+*MXP 2
+*DFN 224PPB250K
+~!Manufacturer_Name (ILLINOIS CAPACITOR)
+~!Manufacturer_Part_Number (224PPB250K)
+~!Mouser Part Number (598-224PPB250K)
+~!Link Mouser Price/Stock (https://www.mouser.com/Search/Refine.aspx?Keyword=598-224PPB250K)
+~!Arrow Part Number (-)
+~!Arrow Price/Stock (-)
+~!Link Datasheet (https://componentsearchengine.com/Datasheets/1/224PPB250K.pdf)
+~!Height (15mm)
+~!3D_Model (224PPB250K)
+"224PPB250K"
+1.1!U 2.1!U 
