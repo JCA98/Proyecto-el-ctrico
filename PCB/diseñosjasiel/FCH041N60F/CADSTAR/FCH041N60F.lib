@@ -1,0 +1,18 @@
+.FCH041N60F :1 ;MOSFET 600V N-Channel MOSFET, FRFET
+TO556P482X1562X2475-3P
+*STM Q
+*NGS
+*PLB 1="G" 2="D" 3="S"
+*MXP 3
+*DFN FCH041N60F
+~!Manufacturer_Name (ON Semiconductor)
+~!Manufacturer_Part_Number (FCH041N60F)
+~!Mouser Part Number (512-FCH041N60F)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/ON-Semiconductor-Fairchild/FCH041N60F?qs=6MGhqEKwI8WD95X2TDsvFg%3D%3D)
+~!Arrow Part Number (-)
+~!Arrow Price/Stock (-)
+~!Link Datasheet (https://www.onsemi.com/pub/Collateral/FCH041N60F-D.pdf)
+~!Height (4.82mm)
+~!3D_Model (FCH041N60F)
+FCH041N60F
+1.1!U 2.1!U 3.1!U 
