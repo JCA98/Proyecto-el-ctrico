@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP FCH041N60F
+D MOSFET 600V N-Channel MOSFET, FRFET
+K
+F https://www.onsemi.com/pub/Collateral/FCH041N60F-D.pdf
+$ENDCMP
+#
+#End Doc Library
