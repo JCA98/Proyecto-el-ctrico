@@ -1,0 +1,10 @@
+(unit MM)
+
+(package "224PPB250K"
+    (type UNDEF)
+    (uver 2)
+    (mountForm default
+        (footprintRef "224PPB250K")
+        (spec "default")
+    )
+)
