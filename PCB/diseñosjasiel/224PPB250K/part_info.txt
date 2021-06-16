@@ -1,0 +1,9 @@
+Manufacturer=ILLINOIS CAPACITOR
+PartNumber=224PPB250K
+PartCategory=Capacitor
+PackageCategory=Other
+PinCount=2
+Version=1.3
+Released=2021-06-15 08:24:59
+Downloaded=2021-06-15 10:05:42
+3D=Y
