@@ -1,0 +1,158 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "FCH041N60F"
+   (description "MOSFET 600V N-Channel MOSFET, FRFET")
+   (family "TRX")
+   (package "TO556P482X1562X2475-3P")
+   (attribute "Datasheet Link" "https://www.onsemi.com/pub/Collateral/FCH041N60F-D.pdf")
+   (attribute "Geometry.Height" "4.82mm")
+   (attribute "Manufacturer_Name" "ON Semiconductor")
+   (attribute "Manufacturer_Part_Number" "FCH041N60F")
+   (attribute "Mouser Part Number" "512-FCH041N60F")
+   (attribute "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/ON-Semiconductor-Fairchild/FCH041N60F?qs=6MGhqEKwI8WD95X2TDsvFg%3D%3D")
+   (attribute "Arrow Part Number" "")
+   (attribute "Arrow Price/Stock" "")
+   (gate
+    (symbol "FCH041N60F")
+    (pin "G" 1 PS)
+    (pin "D" 2 PS)
+    (pin "S" 3 PS)
+   )
+  )
+  (symbol "FCH041N60F"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (circle (pt 400 100) (pt 100 100))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 300 100) (pt 300 -100))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 300 200) (pt 300 300))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 100 0) (pt 200 0) (pt 200 200))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 300 100) (pt 230 100))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 300 200) (pt 230 200))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 230 0) (pt 300 0))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 230 220) (pt 230 180))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 230 -20) (pt 230 20))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 230 80) (pt 230 120))
+   )
+   (graphic
+    (stroke 10)
+    (path (closed true) (pt 230 100) (pt 270 120) (pt 270 80) (pt 230 100))
+   )
+   (terminal
+    (body (symbol "PINSHORT") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 0 -20) (rot 0) (just TOP LEFT) (visible false))
+    (number (pt 80 10) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PINSHORT") (pt 300 400) (rot 90) (mir X) (visible true))
+    (name (pt 0 -20) (rot 90) (just TOP RIGHT) (visible false))
+    (number (pt 0 20) (rot 90) (just TOP LEFT) (visible true)))
+   (terminal
+    (body (symbol "PINSHORT") (pt 300 -200) (rot 90) (mir 0) (visible true))
+    (name (pt 0 -20) (rot 90) (just TOP RIGHT) (visible false))
+    (number (pt 0 20) (rot 90) (just TOP LEFT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "TO556P482X1562X2475-3P"
+   (units MM)
+   (layer OCCA
+    (graphic
+     (stroke 0.05)
+     (path
+      (closed true)
+      (pt -2.625 3.205)
+      (pt 13.745 3.205)
+      (pt 13.745 -2.115)
+      (pt -2.625 -2.115)
+      (pt -2.625 3.205))))
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -2.375 2.955)
+      (pt 13.495 2.955)
+      (pt 13.495 -1.865)
+      (pt -2.375 -1.865)
+      (pt -2.375 2.955))))
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed false)
+      (pt -2.375 0.175)
+      (pt 0.405 2.955))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt 13.495 -1.865)
+      (pt 13.495 2.955)
+      (pt -2.375 2.955)
+      (pt -2.375 0))))
+   (leg 1 (pt 0 0) (padstack 1))
+   (leg 2 (pt 5.56 0) (padstack 0))
+   (leg 3 (pt 11.12 0) (padstack 0))
+   (padstack 0
+    (hole 1.73)
+    (plated true)
+    (pad (layer TCOP) (round 2.595))
+    (pad (layer INNER) (round 2.595))
+    (pad (layer BCOP) (round 2.595))
+   )
+   (padstack 1
+    (hole 1.73)
+    (plated true)
+    (pad (layer TCOP) (square 2.595))
+    (pad (layer INNER) (round 2.595))
+    (pad (layer BCOP) (square 2.595))
+   )
+   (model "FCH041N60F.stp"
+    (euler 0 0 0)
+    (offset 0 0 0)
+   )
+  )
+ )
+)
