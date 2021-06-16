@@ -1,0 +1,68 @@
+(Japanese_coding: sjis)
+(function "ECS_686519"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2021-06-15-08:24:59)
+    (utime 2021-06-15-08:24:59)
+    (interface
+        (port "1" (symbPinId 1) (portType INOUT))
+        (port "2" (symbPinId 2) (portType INOUT))
+    )
+    (property "symbolName" "224PPB250K")
+)
+
+
+(pinAssign "ECS_686519"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2021-06-15-08:24:59)
+    (utime 2021-06-15-08:24:59)
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+    )
+    (internal
+        (funcInst (functionRef "ECS_686519")
+                (port "1" (match "1"))
+                (port "2" (match "2"))
+        )
+    )
+    (property "usePowerBox" "No")
+    (property "symbolName" "224PPB250K")
+)
+
+
+(part "224PPB250K"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2021-06-15-08:24:59)
+    (utime 2021-06-15-08:24:59)
+    (packageRef "224PPB250K")
+    (pinAssignRef "ECS_686519")
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+    )
+    (partClass UNDEF)
+    (useInSchema Y)
+    (useInLayout Y)
+    (inPartsList Y)
+    (partType NORMAL)
+    (placeRestriction FREE)
+    (property "enetNonSeries" "NO")
+    (property "refDesPrefix" "C")
+    (property "description" "CAP FILM 0.22UF 10% 250VDC RAD")
+    (property "Manufacturer_Name" "ILLINOIS CAPACITOR")
+    (property "Manufacturer_Part_Number" "224PPB250K")
+    (property "Mouser_Part_Number" "598-224PPB250K")
+    (property "Mouser_Price/Stock" "https://www.mouser.com/Search/Refine.aspx?Keyword=598-224PPB250K")
+    (property "Arrow_Part_Number" "")
+    (property "Arrow_Price/Stock" "")
+    (property "Datasheet_Link" "https://componentsearchengine.com/Datasheets/1/224PPB250K.pdf")
+    (property "compAreaTopHeight" 15)
+)
+
+
