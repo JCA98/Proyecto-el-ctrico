@@ -5,5 +5,5 @@ PackageCategory=Capacitor Chip Non-polarised
 PinCount=2
 Version=1.1
 Released=2021-06-18 07:33:57
-Downloaded=2021-06-19 20:32:49
+Downloaded=2021-06-20 18:07:18
 3D=Y
