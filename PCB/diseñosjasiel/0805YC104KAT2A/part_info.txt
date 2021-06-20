@@ -1,0 +1,9 @@
+Manufacturer=AVX
+PartNumber=0805YC104KAT2A
+PartCategory=Capacitor
+PackageCategory=Capacitor Chip Non-polarised
+PinCount=2
+Version=1.1
+Released=2021-06-19 08:20:49
+Downloaded=2021-06-20 05:53:58
+3D=Y
