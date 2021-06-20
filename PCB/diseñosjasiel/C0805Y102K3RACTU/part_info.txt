@@ -1,0 +1,9 @@
+Manufacturer=Kemet
+PartNumber=C0805Y102K3RACTU
+PartCategory=Capacitor
+PackageCategory=Capacitor Chip Non-polarised
+PinCount=2
+Version=1.1
+Released=2021-06-18 07:33:57
+Downloaded=2021-06-19 20:32:49
+3D=Y
