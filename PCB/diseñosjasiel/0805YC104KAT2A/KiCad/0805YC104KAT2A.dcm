@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 0805YC104KAT2A
+D AVX 0805YC104KAT2A 100nF MLCC 16V dc SMD
+K
+F https://spicat.avx.com/product/mlcc/chartview/0805YC104KAT2A/DataSheet/X7R
+$ENDCMP
+#
+#End Doc Library
