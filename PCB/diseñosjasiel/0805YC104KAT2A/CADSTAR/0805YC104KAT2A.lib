@@ -1,0 +1,18 @@
+.0805YC104KAT2A :1 ;AVX 0805YC104KAT2A 100nF MLCC 16V dc SMD
+CAPC2012X94N
+*STM C
+*NGS
+*PLB 1="1" 2="2"
+*MXP 2
+*DFN 0805YC104KAT2A
+~!Manufacturer_Name (AVX)
+~!Manufacturer_Part_Number (0805YC104KAT2A)
+~!Mouser Part Number (581-0805YC104K)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/AVX/0805YC104KAT2A?qs=0j3vzYx9OgS3bRufCc82qg%3D%3D)
+~!Arrow Part Number (0805YC104KAT2A)
+~!Link Arrow Price/Stock (https://www.arrow.com/en/products/0805yc104kat2a/avx)
+~!Link Datasheet (https://spicat.avx.com/product/mlcc/chartview/0805YC104KAT2A/DataSheet/X7R)
+~!Height (0.94mm)
+~!3D_Model (0805YC104KAT2A)
+"0805YC104KAT2A"
+1.1!U 2.1!U 
