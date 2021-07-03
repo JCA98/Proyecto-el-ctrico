@@ -1,0 +1,9 @@
+Manufacturer=Kemet
+PartNumber=ALS70A362KE250
+PartCategory=Capacitor Polarised
+PackageCategory=Capacitor Al Electrolytic
+PinCount=2
+Version=1.1
+Released=
+Downloaded=2021-07-02 23:47:25
+3D=Y
