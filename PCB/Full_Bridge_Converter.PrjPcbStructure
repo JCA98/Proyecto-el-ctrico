@@ -1,7 +1,5 @@
 Record=TopLevelDocument|FileName=FLYBACK.SchDoc|SheetNumber=3
-Record=NoMainPathDocument|SourceDocument=FLYBACK.SchDoc|FileName=Gate_Driver.SchDoc|SheetNumber=4
-Record=NoMainPathDocument|SourceDocument=FLYBACK.SchDoc|FileName=Hardware.SchDoc|SheetNumber=7
+Record=NoMainPathDocument|SourceDocument=FLYBACK.SchDoc|FileName=Hardware.SchDoc|SheetNumber=4
 Record=NoMainPathDocument|SourceDocument=FLYBACK.SchDoc|FileName=NuevosGateDriver.SchDoc|SheetNumber=2
-Record=NoMainPathDocument|SourceDocument=FLYBACK.SchDoc|FileName=Optic_PWM.SchDoc|SheetNumber=6
+Record=NoMainPathDocument|SourceDocument=FLYBACK.SchDoc|FileName=Optic_PWM.SchDoc|SheetNumber=5
 Record=NoMainPathDocument|SourceDocument=FLYBACK.SchDoc|FileName=Power_Card.SchDoc|SheetNumber=1
-Record=NoMainPathDocument|SourceDocument=FLYBACK.SchDoc|FileName=PowerSupply.SchDoc|SheetNumber=5
