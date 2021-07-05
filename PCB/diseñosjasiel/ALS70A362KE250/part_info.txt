@@ -1,9 +1,9 @@
 Manufacturer=Kemet
 PartNumber=ALS70A362KE250
 PartCategory=Capacitor Polarised
-PackageCategory=Capacitor Al Electrolytic
+PackageCategory=Capacitor, Polarized Radial Diameter
 PinCount=2
 Version=1.1
 Released=
-Downloaded=2021-07-02 23:47:25
+Downloaded=2021-07-05 17:16:46
 3D=Y
