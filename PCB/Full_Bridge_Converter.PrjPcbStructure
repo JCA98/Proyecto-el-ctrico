@@ -1,4 +1,5 @@
 Record=TopLevelDocument|FileName=FLYBACK.SchDoc|SheetNumber=3
+Record=NoMainPathDocument|SourceDocument=FLYBACK.SchDoc|FileName=GateDrivers.SchDoc|SheetNumber=7
 Record=NoMainPathDocument|SourceDocument=FLYBACK.SchDoc|FileName=Hardware.SchDoc|SheetNumber=4
 Record=NoMainPathDocument|SourceDocument=FLYBACK.SchDoc|FileName=NuevosGateDriver.SchDoc|SheetNumber=2
 Record=NoMainPathDocument|SourceDocument=FLYBACK.SchDoc|FileName=Optic_PWM.SchDoc|SheetNumber=5
