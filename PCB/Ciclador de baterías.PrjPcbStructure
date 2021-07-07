@@ -1,6 +1,5 @@
-Record=TopLevelDocument|FileName=Entradas.SchDoc|SheetNumber=6
+Record=TopLevelDocument|FileName=Entradas.SchDoc|SheetNumber=4
 Record=NoMainPathDocument|SourceDocument=Entradas.SchDoc|FileName=FLYBACK.SchDoc|SheetNumber=3
-Record=NoMainPathDocument|SourceDocument=Entradas.SchDoc|FileName=Hardware.SchDoc|SheetNumber=4
-Record=NoMainPathDocument|SourceDocument=Entradas.SchDoc|FileName=NuevosGateDriver.SchDoc|SheetNumber=2
+Record=NoMainPathDocument|SourceDocument=Entradas.SchDoc|FileName=Hardware.SchDoc|SheetNumber=5
 Record=NoMainPathDocument|SourceDocument=Entradas.SchDoc|FileName=Power_Card.SchDoc|SheetNumber=1
-Record=NoMainPathDocument|SourceDocument=Entradas.SchDoc|FileName=Sheet1.SchDoc|SheetNumber=5
+Record=NoMainPathDocument|SourceDocument=Entradas.SchDoc|FileName=Sheet1.SchDoc|SheetNumber=2
