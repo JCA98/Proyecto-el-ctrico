@@ -163,23 +163,6 @@ GenerateClassCluster=0
 DocumentUniqueId=KCCWWJMJ
 
 [Document8]
-DocumentPath=Hardware.SchDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=4
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=QGSAPDPL
-
-[Document9]
 DocumentPath=PCB1.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -197,24 +180,24 @@ GenerateClassCluster=0
 DocumentUniqueId=KKTSGEUI
 
 [Parameter1]
-Name=VersionRevision
-Value=V1
+Name=Company
+Value=Universidad de Costa Rica
 
 [Parameter2]
-Name=Project
-Value=Convertidor de Puente H
+Name=Department
+Value=Escuela de Ingeniería Eléctrica
 
 [Parameter3]
 Name=DesignByURL
 Value=Kaseng Fong Chen
 
 [Parameter4]
-Name=Department
-Value=Escuela de Ingeniería Eléctrica
+Name=Project
+Value=Convertidor de Puente H
 
 [Parameter5]
-Name=Company
-Value=Universidad de Costa Rica
+Name=VersionRevision
+Value=V1
 
 [Configuration1]
 Name=Sources
