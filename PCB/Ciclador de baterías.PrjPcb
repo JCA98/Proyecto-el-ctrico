@@ -24,6 +24,7 @@ ReorderDocumentsOnCompile=1
 NameNetsHierarchically=0
 PowerPortNamesTakePriority=0
 AutoSheetNumbering=1
+AutoCrossReferences=0
 PushECOToAnnotationFile=1
 DItemRevisionGUID=
 ReportSuppressedErrorsInMessages=0
@@ -178,25 +179,42 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=QGSAPDPL
 
+[Document9]
+DocumentPath=PCB1.PcbDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=KKTSGEUI
+
 [Parameter1]
-Name=Company
-Value=Universidad de Costa Rica
+Name=VersionRevision
+Value=V1
 
 [Parameter2]
-Name=Department
-Value=Escuela de Ingeniería Eléctrica
+Name=Project
+Value=Convertidor de Puente H
 
 [Parameter3]
 Name=DesignByURL
 Value=Kaseng Fong Chen
 
 [Parameter4]
-Name=Project
-Value=Convertidor de Puente H
+Name=Department
+Value=Escuela de Ingeniería Eléctrica
 
 [Parameter5]
-Name=VersionRevision
-Value=V1
+Name=Company
+Value=Universidad de Costa Rica
 
 [Configuration1]
 Name=Sources
