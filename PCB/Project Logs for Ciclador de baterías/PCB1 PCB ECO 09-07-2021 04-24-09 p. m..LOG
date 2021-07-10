@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=GND_G2 Pin=TRACO2-5
+Removed Pin From Net: NetName=GND_G4 Pin=TRACO4-5
+Removed Pin From Net: NetName=GND_G6 Pin=TRACO6-5
+Added Pin To Net: NetName=PGND Pin=TRACO2-5
+Added Pin To Net: NetName=GND Pin=TRACO4-2
+Added Pin To Net: NetName=PGND Pin=TRACO6-5
+Change Net Name : Old Net Name=GND_G2 New Net Name=NetDZ4_2
+Change Net Name : Old Net Name=GND_G4 New Net Name=NetDZ8_2
+Change Net Name : Old Net Name=GND_G6 New Net Name=NetDZ13_2
