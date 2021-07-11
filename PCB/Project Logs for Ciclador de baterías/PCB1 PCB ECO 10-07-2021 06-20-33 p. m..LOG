@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=PGND Pin=HS4-1
+Removed Pin From Net: NetName=PGND Pin=HS4-2
+Removed Pin From Net: NetName=PGND Pin=HS6-1
+Removed Pin From Net: NetName=PGND Pin=HS6-2
+Removed Member From Class: ClassName=Power_Card Member=HS4
+Removed Member From Class: ClassName=Power_Card Member=HS6
+Added Room: Name=FLYBACK
+Added Room: Name=GateDrivers
+Added Room: Name=Power_Card
