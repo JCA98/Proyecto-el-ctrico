@@ -31,7 +31,7 @@ ReportSuppressedErrorsInMessages=0
 FSMCodingStyle=eFMSDropDownList_OneProcess
 FSMEncodingStyle=eFMSDropDownList_OneHot
 IsProjectConflictPreventionWarningsEnabled=0
-OutputPath=Project Outputs for Ciclador de baterías
+OutputPath=
 LogFolderPath=
 ManagedProjectGUID=32DBB959-0553-4D83-AC43-3B094D2678EA
 VaultGUID=8D3F140A-D3E4-49E8-8DDD-443DFF5364D3
@@ -179,23 +179,6 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=KKTSGEUI
 
-[Document9]
-DocumentPath=..\..\..\..\Desktop\Ciclador de baterías.OutJob
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=
-
 [Parameter1]
 Name=Company
 Value=Universidad de Costa Rica
@@ -263,7 +246,7 @@ SCH_HasExpandLogicalToPhysicalSheets=-1
 SaveSettingsToOutJob=-1
 
 [Generic_EDE]
-OutputDir=Project Outputs for Ciclador de baterías
+OutputDir=
 
 [OutputGroup1]
 Name=Netlist Outputs
@@ -374,7 +357,7 @@ OutputDefault20=0
 [OutputGroup2]
 Name=Simulator Outputs
 Description=
-TargetPrinter=Adobe PDF
+TargetPrinter=OneNote (Desktop)
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 
 [OutputGroup3]
