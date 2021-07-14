@@ -1,0 +1,7 @@
+Added Pin To Net: NetName=NetDZ11_2 Pin=R5-1
+Added Pin To Net: NetName=NetDZ11_2 Pin=TRACO5-5
+Change Net Name : Old Net Name=NetDZ11_2 New Net Name=GND_G5
+Added Room: Name=Entradas
+Added Room: Name=FLYBACK
+Added Room: Name=GateDrivers
+Added Room: Name=Power_Card
