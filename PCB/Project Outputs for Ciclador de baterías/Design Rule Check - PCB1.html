@@ -1,0 +1,474 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://E:\altium\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">15/07/2021</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">10:51:20 p. m.</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:15</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc" class="file"><acronym title="C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc">C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">26</td></tr>
+</table>
+</td>
+</table><a name="ID3P0CDWA13DNCCVM0ZSMQBBIANFNG4X5L5UKHOFG5SSYQBCWWMRIL"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDEL4VOHYU1EJOBEIPDIP1KT15ZFXYVWE0ABP2NKKJONXFGYQYNGWI">Clearance Constraint (Gap=1.524mm) (InLayerClass('GND_Layer') and InPolygon),(InNetClass('HV_Class'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDT2FE3G0FGOBDK4HOQGGQ3OA50P23CXPUOEB3MKD0DHNE1KZBHWLE">Clearance Constraint (Gap=0.635mm) (InPoly),(InPoly)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDGGOE1LFLQLSDF4P5SJKFVZUUGBQZAKI04P4XVEPNQLWOXY3EBXGE">Clearance Constraint (Gap=0.305mm) (InPolygon),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID24YGDOSNAB040L0B2IBFBHKEIQTQWS13JMSLFFX4ELLK4Z22C4F">Clearance Constraint (Gap=3mm) (InLayerClass('PWR Class') and InPolygon),(InNetClass('HV_Class'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDTUM21PZJPE3FECZAIK4W3CUTQIAMYCWPBQ5E5HEHFHTMW3K5RDDG">Clearance Constraint (Gap=3mm) (InLayerClass('Bottom_Layer') and InPolygon),(InNetClass('HV_Class'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDGRYCPOAVUTQNEDQNX42WTZAEUGH12F4ZIGWQ5EHDO1LULC2GLVWF">Clearance Constraint (Gap=3mm) (InLayerClass('Top_Layer') and InPolygon),(InNetClass('HV_Class'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDE2ZUAPSLS3LGIY0MOBL1ZAKOUDD4WD50PY4FDKPFYR2VFZNXRH1L">Clearance Constraint (Gap=1.5mm) (InPadClass('mh')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID2XOJZ5E01EAHKHULOMGMYLA54OBGQCKF5TABZ4EMTXVGCLDCD5HC">Clearance Constraint (Gap=0.2mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDHBV4Z4W2TI10OCT4U0B2PAYXZOKB0PD0UCHWYQFIISA0EBYB1RCO">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDHDDLFH2G0BVRD244QCY2WVERSIZDPL123VC0DEPNAJPAJGWXYSRI">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDY0GHTOXRUPN0OZNLULAF4BXM1CFMVGVSABIOZFLKGNFCDJNQQSOP">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDLKC2SCAPCYYAP1D3QWCM3UIQWM04F0340SJ4Y3LAUL13BBN3LGPF">Width Constraint (Min=0.229mm) (Max=2.54mm) (Preferred=0.508mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDK1HZEYZ1SJV1G2D35X5WSJYEPFA0RJNQB2BPPTTGFUU11MGS5YD">Power Plane Connect Rule(Direct Connect )(Expansion=0.254mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDKVOELGXIDUMLEH5ZAOMUMTS1RDIORB4ZEPNDHLPERORYXDWZHW0O">Minimum Annular Ring (Minimum=0.15mm) (IsVia and InAnyComponent)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDOUI0B4GGEB3OMMROMWDYUCHFYNMZNOP5ENCDHHMITNTE3ZF12PNK">Minimum Annular Ring (Minimum=0.14mm) (All)</a></td>
+<td class="column2">6</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDEWO1FDL3D4SDNUZX3KNUNZOLCIDHL23ZGKRZBTFER5SVIBEDFYLC">Acute Angle Constraint (Minimum=45.000) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDD0RWEKNFXKZXCAG511FTTWBUICJRAUWPWLOMWCGCD5ANNLLTVSK">Hole Size Constraint (Min=0.2mm) (Max=25.4mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDABXOPB5ZVV3UDP0NBH3IPMD5DM10IDNF35KET5C0LZSBJLF32VHC">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDEHIR3YMUJPDEBEIREBYUII4VLGNYIP120RGOALHRHK0YX1PCVHEO">Minimum Solder Mask Sliver (Gap=0.1mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDHU2GHKYNQUIXODEBSSX1POBHXQLU3AHBQKQI2JCYIV1O3WHBAGP">Minimum Solder Mask Sliver (Gap=0.018mm) (InComponentClass('Logo')),(InComponentClass('Logo'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDDXH15I4A44E2EEFXC1A0U4HKDMCVWFUF3MWWKXHHCRPTZ03UPEOM">Silk To Solder Mask (Clearance=0.102mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDWNGWAG2LEGMNPPM3AFVJNMGDCO1GDNKN5XB5ZUIHIGMSD5L5Z0LB">Silk To Solder Mask (Clearance=0.127mm) ((IsPad or IsFill or IsRegion) and InAnycomponent),(All)</a></td>
+<td class="column2">20</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID05DIDFJHSUJSIXBX5P4ERQ0BFPUZ3ESMWAYVZSILUJC4PX3ISXYN">Silk to Silk (Clearance=0.102mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDQBNPB2ZQGXUJN0HH0ORVJBLN1OOLUE4Z111CZQCONTDDV4PFVAUN">Silk to Silk (Clearance=0mm) ((HasFootprint('Pb-Free_Overlay_Medium') OR HasFootprint('Pb-Free_Overlay_Small'))),((HasFootprint('Pb-Free_Overlay_Medium') OR HasFootprint('Pb-Free_Overlay_Small')))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDOUE1EFXGOISYFRIOUZQ34UIBHCQOYFO40GBGC4NSJJTODQ5GPTTF">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID5GCBAWHZSCQ4GHMWHCXES1N0REPWUVIHWCEI5TGOZPUREGUUARUI">Board Clearance Constraint (Gap=0mm) (OnCopper and Not InComponentClass('Logo') and not InComponentClass('FiducialMark') and not InRegion(1000,500,4000,800) and not InPoly)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDHVVQEUVE033ANGCV15II0ORION20LMAYT4PTGYHUGIOIUSHY5DLL">Board Clearance Constraint (Gap=0mm) (OnCopper and IsPoly)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDP3ONPD0PS5PDHNK0L1UZGCZROFLECVNVBVK4LHNYRZ1KNMI1HO">Board Clearance Constraint (Gap=0mm) (OnCopper and InComponentClass('Mounting Holes'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDCTVCQHN51ENECRFGNLGZDFVKJGOSS1WFSGD3XUONQP1VOG5I5ENF">Height Constraint (Min=0mm) (Max=101.6mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">26</td>
+</tr>
+</table><br><a name="IDOUI0B4GGEB3OMMROMWDYUCHFYNMZNOP5ENCDHHMITNTE3ZF12PNK"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Annular Ring (Minimum=0.14mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6616.105mil|Location2.X=6622.855mil|Location1.Y=7341.625mil|Location2.Y=7348.375mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6616.105mil|Location2.X=6622.855mil|Location1.Y=7341.625mil|Location2.Y=7348.375mil|Absolute=True">Minimum Annular Ring: (0.024mm &lt; 0.14mm) Pad Q1-1(-51.943mm,117.348mm) on Multi-Layer (Annular Ring=0.024mm) On (Mid Layer 1)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6626.105mil|Location2.X=6632.855mil|Location1.Y=8491.625mil|Location2.Y=8498.375mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6626.105mil|Location2.X=6632.855mil|Location1.Y=8491.625mil|Location2.Y=8498.375mil|Absolute=True">Minimum Annular Ring: (0.024mm &lt; 0.14mm) Pad Q2-1(-51.689mm,146.558mm) on Multi-Layer (Annular Ring=0.024mm) On (Mid Layer 1)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9011.105mil|Location2.X=9017.855mil|Location1.Y=7341.625mil|Location2.Y=7348.375mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9011.105mil|Location2.X=9017.855mil|Location1.Y=7341.625mil|Location2.Y=7348.375mil|Absolute=True">Minimum Annular Ring: (0.024mm &lt; 0.14mm) Pad Q3-1(8.89mm,117.348mm) on Multi-Layer (Annular Ring=0.024mm) On (Mid Layer 1)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9011.105mil|Location2.X=9017.855mil|Location1.Y=8451.625mil|Location2.Y=8458.375mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9011.105mil|Location2.X=9017.855mil|Location1.Y=8451.625mil|Location2.Y=8458.375mil|Absolute=True">Minimum Annular Ring: (0.024mm &lt; 0.14mm) Pad Q4-1(8.89mm,145.542mm) on Multi-Layer (Annular Ring=0.024mm) On (Mid Layer 1)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11581.105mil|Location2.X=11587.855mil|Location1.Y=7301.625mil|Location2.Y=7308.375mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11581.105mil|Location2.X=11587.855mil|Location1.Y=7301.625mil|Location2.Y=7308.375mil|Absolute=True">Minimum Annular Ring: (0.024mm &lt; 0.14mm) Pad Q5-1(74.168mm,116.332mm) on Multi-Layer (Annular Ring=0.024mm) On (Mid Layer 1)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11601.105mil|Location2.X=11607.855mil|Location1.Y=8431.625mil|Location2.Y=8438.375mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11601.105mil|Location2.X=11607.855mil|Location1.Y=8431.625mil|Location2.Y=8438.375mil|Absolute=True">Minimum Annular Ring: (0.024mm &lt; 0.14mm) Pad Q6-1(74.676mm,145.034mm) on Multi-Layer (Annular Ring=0.024mm) On (Mid Layer 1)</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDWNGWAG2LEGMNPPM3AFVJNMGDCO1GDNKN5XB5ZUIHIGMSD5L5Z0LB"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk To Solder Mask (Clearance=0.127mm) ((IsPad or IsFill or IsRegion) and InAnycomponent),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7347.958mil|Location2.X=7354.208mil|Location1.Y=3266.56mil|Location2.Y=3272.81mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7347.958mil|Location2.X=7354.208mil|Location1.Y=3266.56mil|Location2.Y=3272.81mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.075mm &lt; 0.127mm) Between Pad Cin2-1(-34.925mm,14.685mm) on CAPA1 And Track (-34.125mm,11.735mm)(-34.125mm,15.535mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.075mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7295.792mil|Location2.X=7302.042mil|Location1.Y=3266.56mil|Location2.Y=3272.81mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7295.792mil|Location2.X=7302.042mil|Location1.Y=3266.56mil|Location2.Y=3272.81mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.075mm &lt; 0.127mm) Between Pad Cin2-1(-34.925mm,14.685mm) on CAPA1 And Track (-35.725mm,11.735mm)(-35.725mm,14.935mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.075mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7347.958mil|Location2.X=7354.208mil|Location1.Y=3227.19mil|Location2.Y=3233.44mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7347.958mil|Location2.X=7354.208mil|Location1.Y=3227.19mil|Location2.Y=3233.44mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.075mm &lt; 0.127mm) Between Pad Cin2-2(-34.925mm,11.985mm) on CAPA1 And Track (-34.125mm,11.735mm)(-34.125mm,15.535mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.075mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7295.792mil|Location2.X=7302.042mil|Location1.Y=3227.19mil|Location2.Y=3233.44mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7295.792mil|Location2.X=7302.042mil|Location1.Y=3227.19mil|Location2.Y=3233.44mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.075mm &lt; 0.127mm) Between Pad Cin2-2(-34.925mm,11.985mm) on CAPA1 And Track (-35.725mm,11.735mm)(-35.725mm,14.935mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.075mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7090.566mil|Location2.X=7096.816mil|Location1.Y=9946.875mil|Location2.Y=9953.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7090.566mil|Location2.X=7096.816mil|Location1.Y=9946.875mil|Location2.Y=9953.125mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.074mm &lt; 0.127mm) Between Pad J1-1(-41.91mm,183.515mm) on Multi-Layer And Track (-40.7mm,183.115mm)(-40.7mm,183.915mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.074mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6803.184mil|Location2.X=6809.434mil|Location1.Y=9946.875mil|Location2.Y=9953.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6803.184mil|Location2.X=6809.434mil|Location1.Y=9946.875mil|Location2.Y=9953.125mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.074mm &lt; 0.127mm) Between Pad J1-1(-46.99mm,183.515mm) on Multi-Layer And Track (-48.2mm,183.115mm)(-48.2mm,183.915mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.074mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7840.566mil|Location2.X=7846.816mil|Location1.Y=9946.875mil|Location2.Y=9953.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7840.566mil|Location2.X=7846.816mil|Location1.Y=9946.875mil|Location2.Y=9953.125mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.074mm &lt; 0.127mm) Between Pad J2-1(-22.86mm,183.515mm) on Multi-Layer And Track (-21.65mm,183.115mm)(-21.65mm,183.915mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.074mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7553.184mil|Location2.X=7559.434mil|Location1.Y=9946.875mil|Location2.Y=9953.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7553.184mil|Location2.X=7559.434mil|Location1.Y=9946.875mil|Location2.Y=9953.125mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.074mm &lt; 0.127mm) Between Pad J2-1(-27.94mm,183.515mm) on Multi-Layer And Track (-29.15mm,183.115mm)(-29.15mm,183.915mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.074mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11948.184mil|Location2.X=11954.434mil|Location1.Y=9456.875mil|Location2.Y=9463.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11948.184mil|Location2.X=11954.434mil|Location1.Y=9456.875mil|Location2.Y=9463.125mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.074mm &lt; 0.127mm) Between Pad J3-1(83.693mm,171.069mm) on Multi-Layer And Track (82.483mm,170.669mm)(82.483mm,171.469mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.074mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12235.566mil|Location2.X=12241.816mil|Location1.Y=9456.875mil|Location2.Y=9463.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12235.566mil|Location2.X=12241.816mil|Location1.Y=9456.875mil|Location2.Y=9463.125mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.074mm &lt; 0.127mm) Between Pad J3-1(88.773mm,171.069mm) on Multi-Layer And Track (89.983mm,170.669mm)(89.983mm,171.469mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.074mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11938.184mil|Location2.X=11944.434mil|Location1.Y=9951.875mil|Location2.Y=9958.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11938.184mil|Location2.X=11944.434mil|Location1.Y=9951.875mil|Location2.Y=9958.125mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.074mm &lt; 0.127mm) Between Pad J4-1(83.439mm,183.642mm) on Multi-Layer And Track (82.229mm,183.242mm)(82.229mm,184.042mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.074mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12225.566mil|Location2.X=12231.816mil|Location1.Y=9951.875mil|Location2.Y=9958.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12225.566mil|Location2.X=12231.816mil|Location1.Y=9951.875mil|Location2.Y=9958.125mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.074mm &lt; 0.127mm) Between Pad J4-1(88.519mm,183.642mm) on Multi-Layer And Track (89.729mm,183.242mm)(89.729mm,184.042mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.074mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8615.566mil|Location2.X=8621.816mil|Location1.Y=10121.875mil|Location2.Y=10128.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8615.566mil|Location2.X=8621.816mil|Location1.Y=10121.875mil|Location2.Y=10128.125mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.074mm &lt; 0.127mm) Between Pad J5-1(-3.175mm,187.96mm) on Multi-Layer And Track (-1.965mm,187.56mm)(-1.965mm,188.36mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.074mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8328.184mil|Location2.X=8334.434mil|Location1.Y=10121.875mil|Location2.Y=10128.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8328.184mil|Location2.X=8334.434mil|Location1.Y=10121.875mil|Location2.Y=10128.125mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.074mm &lt; 0.127mm) Between Pad J5-1(-8.255mm,187.96mm) on Multi-Layer And Track (-9.465mm,187.56mm)(-9.465mm,188.36mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.074mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9153.184mil|Location2.X=9159.434mil|Location1.Y=10121.875mil|Location2.Y=10128.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9153.184mil|Location2.X=9159.434mil|Location1.Y=10121.875mil|Location2.Y=10128.125mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.074mm &lt; 0.127mm) Between Pad J6-1(12.7mm,187.96mm) on Multi-Layer And Track (11.49mm,187.56mm)(11.49mm,188.36mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.074mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9440.566mil|Location2.X=9446.816mil|Location1.Y=10121.875mil|Location2.Y=10128.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9440.566mil|Location2.X=9446.816mil|Location1.Y=10121.875mil|Location2.Y=10128.125mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.074mm &lt; 0.127mm) Between Pad J6-1(17.78mm,187.96mm) on Multi-Layer And Track (18.99mm,187.56mm)(18.99mm,188.36mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.074mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5246.875mil|Location2.X=5253.125mil|Location1.Y=7003.184mil|Location2.Y=7009.434mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5246.875mil|Location2.X=5253.125mil|Location1.Y=7003.184mil|Location2.Y=7009.434mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.074mm &lt; 0.127mm) Between Pad J7-1(-87.63mm,109.855mm) on Multi-Layer And Track (-88.03mm,108.645mm)(-87.23mm,108.645mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.074mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5246.875mil|Location2.X=5253.125mil|Location1.Y=7290.566mil|Location2.Y=7296.816mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5246.875mil|Location2.X=5253.125mil|Location1.Y=7290.566mil|Location2.Y=7296.816mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.074mm &lt; 0.127mm) Between Pad J7-1(-87.63mm,114.935mm) on Multi-Layer And Track (-88.03mm,116.145mm)(-87.23mm,116.145mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.074mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12516.875mil|Location2.X=12523.125mil|Location1.Y=11303.184mil|Location2.Y=11309.434mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12516.875mil|Location2.X=12523.125mil|Location1.Y=11303.184mil|Location2.Y=11309.434mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.074mm &lt; 0.127mm) Between Pad J8-1(97.028mm,219.075mm) on Multi-Layer And Track (96.628mm,217.865mm)(97.428mm,217.865mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.074mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12516.875mil|Location2.X=12523.125mil|Location1.Y=11590.566mil|Location2.Y=11596.816mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\WPC\Documents\GitHub\Proyecto-el-ctrico\PCB\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12516.875mil|Location2.X=12523.125mil|Location1.Y=11590.566mil|Location2.Y=11596.816mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.074mm &lt; 0.127mm) Between Pad J8-1(97.028mm,224.155mm) on Multi-Layer And Track (96.628mm,225.365mm)(97.428mm,225.365mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.074mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
