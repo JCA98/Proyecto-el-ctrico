@@ -275,7 +275,7 @@ Plecs {
       MaskIconOpaque off
       MaskIconRotates on
       Schematic {
-        Location      [0, 23; 1440, 811]
+        Location      [0, 27; 1440, 815]
         ZoomFactor    2.94117
         SliderPosition [158, 0]
         ShowBrowser   off
@@ -799,7 +799,7 @@ Plecs {
           Flipped       off
           Parameter {
             Variable      "Time"
-            Value         "0.2"
+            Value         "0.04"
             Show          off
           }
           Parameter {
@@ -1022,7 +1022,6 @@ Plecs {
             DstTerminal   2
           }
           Branch {
-            Points        [95, 80]
             DstComponent  "Goto5"
             DstTerminal   1
           }
@@ -3247,56 +3246,37 @@ Plecs {
       Flipped       off
       Location      [0, 27; 1440, 844]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAADFvwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAAFwA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"G0AQQByAGUAYQAAAAAA/////wAAADQA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAALwAAAxYAAABmAP///wAAAAMAAAAAAAAAAPw"
 "BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABQAP///wAABaAAAAMWAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
       HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAA"
-"wAAAGQAAAACAAAAZAAAAAUAAABkAAAABAAAAGQAAAAHAAAAZAAAAAYAAABkAAAACQAAAGQAAAAIAA"
-"AAZAAAAAEAAABkAAAA2wAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAsAAAC0AAA"
+"gAAAGQAAAADAAAAZAAAAAEAAABkAAAABgAAAGQAAAAHAAAAZAAAAAQAAABkAAAABQAAAGQAAAAIAA"
+"AAZAAAAAkAAABkAAABWAAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAsAAAExAAA"
 "AAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAA"
 "AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAA"
 "AAnAAAAAQAAAAAAAAPoAAAAACc="
-      PlotPalettes  "AAAAAQAAAAMAAAABAAAAAwAAAAEC//8u4P//zMwAAAAAAAEC//8AAP///"
-"/8AAAAAAAEC//9PsP////8AAAAAAAMAAAABAAAAAAEAAAAAAQAAAAADAAAAAQAAAAEAAAABAAAAAQ"
-"AAAAEAAAABAAAAAwAAAAEAAAAAAQAAAAABAAAAAAMAAAABQAAAAAAAAAAAAAABQAAAAAAAAAAAAAA"
-"BQAAAAAAAAAAAAAADAAAAAQEAAAABAQAAAAEBAAAAAgAAAAEAAAACAAAAAQH//wAA//8AAAAAAAAA"
-"AQH//wAAqqr//wAAAAAAAgAAAAEBAAAAAQEAAAACAAAAAQAAAAEAAAABAAAAAQAAAAIAAAABAAAAA"
-"AEAAAAAAgAAAAFAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAIAAAABAQAAAAEB"
-      Axes          "2"
+      PlotPalettes  "AAAAAQAAAAIAAAABAAAAAgAAAAEB//8AAP//AAAAAAAAAAEB//8AAKqq/"
+"/8AAAAAAAIAAAABAQAAAAEBAAAAAgAAAAEAAAABAAAAAQAAAAEAAAACAAAAAQAAAAABAAAAAAIAAA"
+"ABQAAAAAAAAAAAAAABQAAAAAAAAAAAAAACAAAAAQEAAAABAQ=="
+      Axes          "1"
       TimeRange     "0"
       ScrollingMode "1"
-      SingleTimeAxis "1"
+      SingleTimeAxis "0"
       Open          "0"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    "Tiempo (s)"
       ShowLegend    "2"
       Axis {
-        Name          base64 "UHJpbmNpcGFsZXMgdGVuc2lvbmVzIGRlbCBjaWNsYWRvciBk"
-"ZSBiYXRlcsOtYXM="
+        Name          base64 "Q29ycmllbnRlIHJlYWwgeSBkZXNlYWRhIGRlIGxhIGJhdGVy"
+"w61h"
         AutoScale     1
         MinValue      0
         MaxValue      1
-        Signals       {base64 "VGVuc2nDs24gZGUgZW50cmFkYQ==", base64 "VGVuc2nD"
-"s24gZW4gZWwgY2FwYWNpdG9y", base64 "VGVuc2nDs24gZGUgc2FsaWRhIGRlIGxhIGJhdGVyw6"
-"1h"}
-        SignalTypes   [ ]
-        AxisLabel     base64 "VGVuc2nDs24gKFYp"
-        Untangle      0
-        KeepBaseline  off
-        BaselineValue 0
-      }
-      Axis {
-        Name          base64 "Q29ycmllbnRlIGRlIGVudHJhZGEgeSBzYWxpZGEgZGVsIGNp"
-"Y2xhZG9yIGRlIGJhdGVyw61hcw=="
-        AutoScale     1
-        MinValue      0
-        MaxValue      1
-        Signals       {"Corriente de entrada", base64 "Q29ycmllbnRlIGRlIHNhbGl"
-"kYSBhIGxhIGJhdGVyw61h"}
+        Signals       {"Corriente deseada", "Corriente real"}
         SignalTypes   [ ]
         AxisLabel     "Corriente (A)"
         Untangle      0
@@ -3309,18 +3289,6 @@ Plecs {
         Scaling           0
         PhaseDisplay      0
         ShowFourierLegend off
-        Axis {
-          Name          ""
-          AutoScale     1
-          MinValue      0
-          MaxValue      1
-          Signals       {base64 "VGVuc2nDs24gZGUgZW50cmFkYQ==", base64 "VGVuc2"
-"nDs24gZW4gZWwgY2FwYWNpdG9y", base64 "VGVuc2nDs24gZGUgc2FsaWRhIGRlIGxhIGJhdGVy"
-"w61h"}
-          Untangle      0
-          KeepBaseline  off
-          BaselineValue 0
-        }
         Axis {
           Name          ""
           AutoScale     1
@@ -3436,7 +3404,7 @@ Plecs {
       Flipped       off
       Parameter {
         Variable      "Tag"
-        Value         "iL2"
+        Value         "iL*"
         Show          off
       }
       Parameter {
@@ -3808,9 +3776,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Mux"
       SrcTerminal   1
-      Points        [455, 360; 455, 355; 495, 355; 495, 370]
-      DstComponent  "Scope"
-      DstTerminal   1
+      Points        [455, 360; 455, 355; 495, 355; 495, 370; 500, 370]
     }
     Connection {
       Type          Signal
@@ -3840,9 +3806,9 @@ Plecs {
       Type          Signal
       SrcComponent  "Mux1"
       SrcTerminal   1
-      Points        [485, 390; 485, 380]
+      Points        [485, 390; 485, 375]
       DstComponent  "Scope"
-      DstTerminal   2
+      DstTerminal   1
     }
   }
   Analysis {
